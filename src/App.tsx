@@ -11,6 +11,11 @@ const Resume = lazy(() => import('./pages/resume'));
 
 const queryClient = new QueryClient();
 
+/** Must match `base` in vite.config.ts (GitHub project page /repo-name/). */
+const GH_PAGES_BASE = '/particle-folio';
+const routerBasename =
+  import.meta.env.BASE_URL.replace(/\/$/, '') || GH_PAGES_BASE;
+
 const LoadingFallback = () => (
   <div className="min-h-screen bg-background flex items-center justify-center">
     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
@@ -34,12 +39,12 @@ const App = () => (
         }}
       />
 
-      <BrowserRouter>
+      <BrowserRouter basename={routerBasename}>
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="*" element={<NotFound />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
