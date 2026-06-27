@@ -225,7 +225,7 @@ const ProjectCard = ({
                 variant="ghost"
               >
                 <Smartphone size={16} />
-                Google Play
+                App
               </Button>
             </motion.a>
           )}
