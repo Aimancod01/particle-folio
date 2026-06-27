@@ -8,8 +8,6 @@ import Technologies from '@/components/Technologies';
 import { Link } from 'react-router-dom';
 import cImg from '../assets/images/charles.png';
 import cImg2 from '../assets/images/charles2.png';
-import caseImg from '../assets/images/case.png';
-import caseImg1 from '../assets/images/case1.png';
 import hImg from '../assets/images/host.png';
 import hImg1 from '../assets/images/host1.png';
 import aImg from '../assets/images/apc.png';
@@ -266,7 +264,7 @@ const Index = () => {
                   'Admin Dashboard',
                 ]}
                 images={[cImg]}
-                liveUrl="https://app.justaskcharles.com/"
+                liveUrl="https://justaskcharles.com/"
               />
 
               <ProjectCard
@@ -286,18 +284,20 @@ const Index = () => {
               />
 
               <ProjectCard
-                title="Case Management App"
-                description="A comprehensive medical-legal platform for managing patient cases from intake to settlement. Features complex workflows for medical and legal reviews, role-based dashboards, and automated task queues. Supports document management, integrated communication logs, and secure multi-tier approvals for streamlined efficiency across diverse staff roles."
+                title="AskTailr — AI Personal Stylist"
+                description="AskTailr is a consumer AI styling product where users upload their wardrobe, chat with Tailr, and get personalized outfit suggestions based on context, weather, and occasion — without brand pitches or affiliate pressure. I built the frontend in React and TypeScript with a modular chat, wardrobe, and settings experience. The app integrates Firebase Auth, a REST backend, and Gemini-powered responses with support for image generation, wardrobe context, weather, and calendar-aware recommendations."
                 technologies={[
                   'React',
-                  'Workflow Automation',
-                  'Document Management',
-                  'Role-based Access',
-                  'Node.js',
-                  'WebSockets',
+                  'TypeScript',
+                  'Firebase Auth',
+                  'Gemini AI',
+                  'REST API',
+                  'Image Generation',
+                  'Lookbooks',
                 ]}
-                images={[caseImg]}
-                liveUrl="https://phpstack-1250693-6093995.cloudwaysapps.com/login"
+                liveUrl="https://asktailr.com/"
+                liveUrlLabel="Website"
+                appStoreUrl="https://play.google.com/store/apps/details?id=com.asktailr.app"
               />
 
               <ProjectCard

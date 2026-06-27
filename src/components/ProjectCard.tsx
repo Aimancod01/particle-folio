@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Link as LinkIcon, Volume2, VolumeX } from 'lucide-react';
+import { ExternalLink, Github, Link as LinkIcon, Smartphone, Volume2, VolumeX } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 
@@ -10,6 +10,8 @@ interface ProjectCardProps {
   images?: string[];
   technologies: string[];
   liveUrl?: string;
+  liveUrlLabel?: string;
+  appStoreUrl?: string;
   githubUrl?: string;
   website?: string;
   audioUrl?: string;
@@ -22,6 +24,8 @@ const ProjectCard = ({
   images = [],
   technologies,
   liveUrl,
+  liveUrlLabel = 'Live Demo',
+  appStoreUrl,
   githubUrl,
   website,
   audioUrl,
@@ -203,7 +207,25 @@ const ProjectCard = ({
                 variant="ghost"
               >
                 <ExternalLink size={16} />
-                Live Demo
+                {liveUrlLabel}
+              </Button>
+            </motion.a>
+          )}
+          {appStoreUrl && (
+            <motion.a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Button
+                className="w-full gap-2 bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 text-foreground border border-white/10"
+                variant="ghost"
+              >
+                <Smartphone size={16} />
+                Google Play
               </Button>
             </motion.a>
           )}
