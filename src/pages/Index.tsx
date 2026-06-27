@@ -22,6 +22,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import AnimatedSection from '@/components/AnimatedSection';
 import MagneticButton from '@/components/MagneticButton';
 import { motion } from 'motion/react';
+import tailrImg from '../assets/images/asktailr.png';
 
 const Index = () => {
   return (
@@ -296,6 +297,7 @@ const Index = () => {
                   'Lookbooks',
                 ]}
                 liveUrl="https://asktailr.com/"
+                images={[tailrImg]}
                 liveUrlLabel="Website"
                 appStoreUrl="https://play.google.com/store/apps/details?id=com.asktailr.app"
               />
