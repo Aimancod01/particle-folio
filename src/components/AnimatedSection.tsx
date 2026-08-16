@@ -17,8 +17,8 @@ const AnimatedSection = ({
   id,
 }: AnimatedSectionProps) => {
   const { ref, isInView } = useInView({
-    threshold: 0.1,
-    rootMargin: '-50px',
+    threshold: 0,
+    rootMargin: '80px 0px',
     triggerOnce: true,
   });
 
