@@ -23,6 +23,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 import MagneticButton from '@/components/MagneticButton';
 import { motion } from 'motion/react';
 import tailrImg from '../assets/images/asktailr.png';
+import metrabellImg from '../assets/images/metrabell.png';
 
 const Index = () => {
   return (
@@ -252,6 +253,20 @@ const Index = () => {
               </h2>
             </div>
             <div className="space-y-12">
+                    <ProjectCard
+                title="Metrabell | AI Lead Generation & Sales Workspace"
+                description="Metrabell is an AI-powered lead generation and sales workspace that captures and scores leads from WhatsApp and Instagram conversations, classifying prospects as hot, warm, or cold based on buying intent. It includes a lead pipeline with action queues, AI conversion scoring, revenue tracking, and a unified omnichannel inbox for messaging, team assignment, SLA tracking, and performance analytics. I also built the workspace onboarding and channel management flows to help businesses connect and manage their communication channels efficiently."
+                technologies={[
+                  'AI Lead Scoring',
+                  'WhatsApp / Instagram',
+                  'Sales Pipeline',
+                  'Omnichannel Inbox',
+                  'Analytics',
+                  'Workspace Onboarding',
+                ]}
+                images={[metrabellImg]}
+                liveUrl="https://misapp.tekxai.com/"
+              />
               <ProjectCard
                 title="Ask Charles"
                 description="Ask Charles is an AI-powered web app that helps people evaluate items they've inherited or collected (antiques, estate items, etc.). Users upload 1–4 photos and/or describe an item, and Charles returns a structured assessment with value range, identifying details, and authenticity notes, plus advice on whether to keep, sell, or get a formal appraisal. The app includes a chat interface, image uploads, real-time analysis via WebSockets, auth, checkout/subscriptions, and an admin panel for users, prompts, and response rules."
@@ -301,6 +316,8 @@ const Index = () => {
                 liveUrlLabel="Website"
                 appStoreUrl="https://play.google.com/store/apps/details?id=com.asktailr.app"
               />
+
+        
 
               <ProjectCard
                 title="HostSwitch"
