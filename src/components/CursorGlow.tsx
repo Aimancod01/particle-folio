@@ -17,7 +17,7 @@ const CursorGlow = () => {
   return (
     <motion.div
       animate={controls}
-      className="pointer-events-none fixed inset-0 z-50"
+      className="pointer-events-none fixed inset-0 z-50 hidden lg:block"
       style={{ willChange: 'transform' }}
     >
       <div
