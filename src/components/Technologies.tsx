@@ -48,26 +48,26 @@ export default function Technologies() {
   return (
     <section>
       <motion.h2
-        className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3 uppercase"
+        className="text-sm font-bold text-muted-foreground mb-8 flex items-center gap-4 tracking-widest uppercase"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <span className="w-8 h-0.5 bg-gradient-to-r from-primary to-accent"></span>
+        <span className="w-12 h-[1px] bg-foreground/20"></span>
         Technologies
       </motion.h2>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
         {technologies.map((tech, index) => (
           <motion.div
             key={index}
-            className="bg-muted/10 backdrop-blur-md flex flex-col items-center justify-center p-6 rounded-xl shadow-md border border-white/5 group"
+            className="bg-muted/10 backdrop-blur-md flex flex-col items-center justify-center p-5 rounded-xl shadow-md border border-white/10 group hover:border-primary/30 hover:bg-primary/5 transition-colors"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05, duration: 0.4 }}
-            whileHover={{ scale: 1.1, y: -8 }}
+            whileHover={{ scale: 1.06, y: -6 }}
             whileTap={{ scale: 0.95 }}
           >
             <motion.div

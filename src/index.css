@@ -298,3 +298,27 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+.preview-shine {
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(255, 255, 255, 0.18) 50%,
+    rgba(255, 255, 255, 0.08) 55%,
+    transparent 100%
+  );
+}
+
+.project-preview:hover .preview-shine {
+  animation: preview-shine 1.15s ease-in-out;
+}
+
+@keyframes preview-shine {
+  from {
+    transform: translateX(-20%) skewX(-18deg);
+  }
+  to {
+    transform: translateX(280%) skewX(-18deg);
+  }
+}

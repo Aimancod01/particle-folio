@@ -3,7 +3,7 @@ import SkillBadge from '@/components/SkillBadge';
 import ExperienceCard from '@/components/ExperienceCard';
 import ProjectCard from '@/components/ProjectCard';
 import { Button } from '@/components/ui/button';
-import { Mail, Github, Linkedin, MailCheck, FileUser, FileText } from 'lucide-react';
+import { Github, Linkedin, MailCheck, FileText } from 'lucide-react';
 import Technologies from '@/components/Technologies';
 import { Link } from 'react-router-dom';
 import cImg from '../assets/images/charles.png';
@@ -25,6 +25,12 @@ import { motion } from 'motion/react';
 import tailrImg from '../assets/images/asktailr.png';
 import metrabellImg from '../assets/images/metrabell.png';
 
+const aboutHighlights = [
+  { label: '3+ years', detail: 'Shipping products' },
+  { label: 'Full Stack', detail: 'Web & mobile' },
+  { label: 'AI-powered', detail: 'LLMs in production' },
+];
+
 const Index = () => {
   return (
     <div className="max-w-[85rem] mx-auto bg-background min-h-screen flex flex-col lg:flex-row relative">
@@ -39,6 +45,9 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary/80">
+              Full Stack Developer
+            </p>
             <BlurText
               text="Hey there, I'm Aiman Naeem! 👋"
               delay={150}
@@ -83,7 +92,7 @@ const Index = () => {
               React Native
             </SkillBadge>
             <SkillBadge variant="accent" className="text-sm py-1.5 px-4 shadow-lg shadow-accent/10">
-              Backend (Node, Firebase)
+              Node.js & AI
             </SkillBadge>
           </motion.div>
 
@@ -93,8 +102,8 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            Where Code Meets Creativity: Building Digital Experiences that Matter. From intuitive
-            interfaces to powerful backend systems, I create solutions that engage and inspire.
+            I turn ideas and designs into fast, scalable products — from clean, responsive
+            frontends to APIs, auth, and AI-powered experiences people actually enjoy using.
           </motion.p>
 
           <motion.div
@@ -167,21 +176,52 @@ const Index = () => {
           <AnimatedSection id="about" delay={0.1}>
             <h2 className="text-sm font-bold text-muted-foreground mb-8 flex items-center gap-4 tracking-widest uppercase">
               <span className="w-12 h-[1px] bg-foreground/20"></span>
-              About Me
+              Overview
             </h2>
-            <div className="card-glow rounded-2xl p-8 bg-background/40 backdrop-blur-sm border border-white/5 shadow-2xl shadow-black/5 group hover:border-primary/20 transition-all duration-500">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Hi! I'm a{' '}
-                <span className="text-foreground font-semibold">full-stack developer</span> based in
-                Lahore, started in 2023. I build{' '}
-                <span className="text-foreground font-semibold bg-gradient-to-r from-primary/20 to-transparent px-1 rounded">
-                  web and mobile apps
-                </span>{' '}
-                with React, Next.js, and React Native — frontend is my strongest suit but I go full
-                stack when needed. Lately I've been integrating{' '}
-                <span className="text-foreground font-semibold">AI APIs</span> into real products,
-                which has become the most interesting part of my work.
-              </p>
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-background/50 backdrop-blur-sm shadow-2xl shadow-black/10 group hover:border-primary/25 transition-all duration-500">
+              <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-primary via-accent to-primary/40" />
+              <div className="p-8 md:p-9">
+                <div className="grid grid-cols-3 gap-3 mb-8">
+                  {aboutHighlights.map((item) => (
+                    <div
+                      key={item.label}
+                      className="rounded-xl border border-white/10 bg-white/[0.03] px-2 sm:px-3 py-3 text-center"
+                    >
+                      <p className="text-xs sm:text-sm font-semibold text-foreground">{item.label}</p>
+                      <p className="mt-1 text-[10px] sm:text-[11px] text-muted-foreground">{item.detail}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    I’m a{' '}
+                    <span className="text-foreground font-semibold">Full Stack Developer</span> with{' '}
+                    <span className="text-foreground font-semibold">3+ years</span> of experience
+                    building fast, scalable, and user-focused web and mobile applications. I work
+                    across the stack, turning ideas and designs into production-ready products using{' '}
+                    <span className="text-foreground font-semibold bg-gradient-to-r from-primary/20 to-transparent px-1 rounded">
+                      React, Next.js, React Native, Node.js
+                    </span>
+                    , and modern backend technologies.
+                  </p>
+                  <p>
+                    My core strength is building{' '}
+                    <span className="text-foreground font-semibold">clean, responsive frontends</span>
+                    , but I’m equally comfortable developing APIs, databases, authentication,
+                    integrations, and end-to-end application architecture. More recently, I’ve been
+                    focused on{' '}
+                    <span className="text-foreground font-semibold">AI-powered software</span>,
+                    integrating LLMs and AI APIs into real-world products to build smarter, more
+                    automated user experiences.
+                  </p>
+                  <p>
+                    I enjoy solving complex problems, learning new technologies, and turning
+                    ambitious ideas into reliable products that are both technically solid and
+                    enjoyable to use.
+                  </p>
+                </div>
+              </div>
             </div>
           </AnimatedSection>
 
@@ -252,8 +292,8 @@ const Index = () => {
                 />
               </h2>
             </div>
-            <div className="space-y-12">
-                    <ProjectCard
+            <div className="space-y-10">
+              <ProjectCard
                 title="Metrabell | AI Lead Generation & Sales Workspace"
                 description="Metrabell is an AI-powered lead generation and sales workspace that captures and scores leads from WhatsApp and Instagram conversations, classifying prospects as hot, warm, or cold based on buying intent. It includes a lead pipeline with action queues, AI conversion scoring, revenue tracking, and a unified omnichannel inbox for messaging, team assignment, SLA tracking, and performance analytics. I also built the workspace onboarding and channel management flows to help businesses connect and manage their communication channels efficiently."
                 technologies={[
@@ -279,7 +319,7 @@ const Index = () => {
                   'Authentication',
                   'Admin Dashboard',
                 ]}
-                images={[cImg]}
+                images={[cImg, cImg2]}
                 liveUrl="https://justaskcharles.com/"
               />
 
@@ -295,7 +335,7 @@ const Index = () => {
                   'Admin Dashboard (LLM settings)',
                   'PWA (offline-ready installable app)',
                 ]}
-                images={[lear1]}
+                images={[lear1, lear2]}
                 liveUrl="https://learnerscruise.com/"
               />
 
@@ -317,8 +357,6 @@ const Index = () => {
                 appStoreUrl="https://play.google.com/store/apps/details?id=com.asktailr.app"
               />
 
-        
-
               <ProjectCard
                 title="HostSwitch"
                 description="A comprehensive property management platform that connects property owners with professional property managers, featuring advanced matching algorithms, proposal systems, real-time messaging, and integrated payment processing."
@@ -330,7 +368,7 @@ const Index = () => {
                   'Payment Processing',
                   'Matching Algorithms',
                 ]}
-                images={[hImg]}
+                images={[hImg, hImg1]}
                 liveUrl="https://phpstack-1250693-5681845.cloudwaysapps.com/login"
               />
 
