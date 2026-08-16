@@ -21,6 +21,7 @@ import CursorGlow from '@/components/CursorGlow';
 import ScrollProgress from '@/components/ScrollProgress';
 import AnimatedSection from '@/components/AnimatedSection';
 import MagneticButton from '@/components/MagneticButton';
+import MobileNav from '@/components/MobileNav';
 import { motion } from 'motion/react';
 import tailrImg from '../assets/images/asktailr.png';
 import metrabellImg from '../assets/images/metrabell.png';
@@ -37,8 +38,12 @@ const Index = () => {
       <ParticleBackground />
       <CursorGlow />
       <ScrollProgress />
+      <MobileNav />
 
-      <div className="w-full lg:w-6/12 lg:sticky lg:top-0 lg:h-screen p-8 lg:p-16 flex flex-col justify-center relative z-10 backdrop-blur-[2px]">
+      <div
+        id="home"
+        className="w-full lg:w-6/12 lg:sticky lg:top-0 lg:h-screen p-8 lg:p-16 flex flex-col justify-center relative z-10 backdrop-blur-[2px] scroll-mt-16"
+      >
         <div className="max-w-xl mx-auto lg:mx-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -172,8 +177,8 @@ const Index = () => {
       </div>
 
       <div className="w-full lg:w-7/12 lg:ml-auto relative min-h-screen">
-        <div className="p-6 md:p-12 lg:p-16 space-y-16 lg:space-y-24 pb-32">
-          <AnimatedSection id="about" delay={0.1}>
+        <div className="p-6 md:p-12 lg:p-16 space-y-16 lg:space-y-24 pb-[calc(7.5rem+env(safe-area-inset-bottom))] lg:pb-32">
+          <AnimatedSection id="about" delay={0.1} className="scroll-mt-16">
             <h2 className="text-sm font-bold text-muted-foreground mb-8 flex items-center gap-4 tracking-widest uppercase">
               <span className="w-12 h-[1px] bg-foreground/20"></span>
               Overview
@@ -225,7 +230,7 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection id="experience" delay={0.2}>
+          <AnimatedSection id="experience" delay={0.2} className="scroll-mt-16">
             <h2 className="text-sm font-bold text-muted-foreground mb-8 flex items-center gap-4 tracking-widest uppercase">
               <span className="w-12 h-[1px] bg-foreground/20"></span>
               Work Experience
@@ -276,7 +281,7 @@ const Index = () => {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection id="projects" delay={0.1}>
+          <AnimatedSection id="projects" delay={0.1} className="scroll-mt-16">
             <div className="relative">
               <h2 className="text-sm font-bold text-muted-foreground mb-8 flex items-center gap-4 tracking-widest uppercase relative">
                 <motion.span
@@ -401,7 +406,7 @@ const Index = () => {
             <Technologies />
           </AnimatedSection>
 
-          <AnimatedSection delay={0.2}>
+          <AnimatedSection id="contact" delay={0.2} className="scroll-mt-16">
             <ContactForm />
           </AnimatedSection>
         </div>

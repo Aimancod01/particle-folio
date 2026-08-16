@@ -95,7 +95,7 @@ const ProjectCard = ({
       className="group relative h-full"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={{ once: true, amount: 0.05, margin: '80px 0px' }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       whileHover={{ y: -4, transition: { duration: 0.3 } }}
     >
