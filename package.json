@@ -5,8 +5,8 @@
   "type": "module",
   "homepage": "https://aimancod01.github.io/particle-folio",
   "scripts": {
-    "dev": "vite",
-    "build": "node scripts/build.mjs",
+    "dev": "node api.js && vite",
+    "build": "node api.js && node scripts/build.mjs",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
