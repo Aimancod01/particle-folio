@@ -11,7 +11,7 @@ import cImg2 from '../assets/images/charles2.png';
 import hImg from '../assets/images/host.png';
 import hImg1 from '../assets/images/host1.png';
 import aImg from '../assets/images/apc.png';
-import iImg from '../assets/images/innerquest.png';
+import padroamImg from '../assets/images/padroam.png';
 import eImg from '../assets/images/ig1.png';
 import lear1 from '../assets/images/lear1.png';
 import lear2 from '../assets/images/lear2.png';
@@ -393,11 +393,11 @@ const Index = () => {
                 liveUrl="https://phpstack-1250693-5232557.cloudwaysapps.com/auth/login"
               />
               <ProjectCard
-                title="InnerQuest"
-                description="A self-discovery app that guides users through questions to uncover their life's purpose and generate AI-powered mission statements. Built with a React-based admin dashboard for managing content and analytics, along with a mobile app for an engaging user experience."
-                technologies={['React', 'React Native', 'AI APIs', 'Material UI', 'Stripe']}
-                liveUrl="https://play.google.com/store/apps/details?id=com.innerquest.app"
-                images={[iImg]}
+                title="PadRoam"
+                description="PadRoam is a marketplace for monthly RV park, mobile home community, and land stays. Renters search listings on a map and message owners directly. There is no online booking. Built with a Next.js frontend and a Python FastAPI backend."
+                technologies={['Next.js', 'FastAPI', 'Python', 'Map Search', 'Direct Messaging']}
+                images={[padroamImg]}
+                liveUrl="https://padroam.tekxai.com/"
               />
             </div>
           </AnimatedSection>
